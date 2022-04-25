@@ -1,0 +1,5 @@
+name: torch2trt
+version: __from_changelog__
+
+build: |
+  install_python torch2trt

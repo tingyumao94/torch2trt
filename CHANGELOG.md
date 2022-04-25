@@ -1,5 +1,11 @@
 # Changes
 
+## [0.4.1] - 2022/04/20
+- Fix add_constant for explicit batch.
+
+## [0.4.0] - 2022/04/11
+- Support explicit batch. It is not backward compatible
+
 ## [Master]
 
 - Added support for Deep Learning Accelerator (DLA)

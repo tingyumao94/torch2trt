@@ -113,7 +113,7 @@ def torch_dim_to_trt_axes(dim):
 
 def add_trt_constant(network, tensor):
     shape = tuple(tensor.shape)
-    array = tensor[0].detach().cpu().numpy()
+    array = tensor.detach().cpu().numpy()
     layer = network.add_constant(shape, array)
     return layer.get_output(0)
 
@@ -154,7 +154,7 @@ def add_missing_trt_tensors(network, tensors):
 
         # or... add constant for leaf tensor w/o _trt
         else:
-
+            print(f'WARNING: torch2trt add a constant leaf node with shape {t.shape}')
             # remove all preceding ones, these can be re-inserted later when broadcasting
             num_preceding_ones = 0
             for j in range(len(t.shape)):

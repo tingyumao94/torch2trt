@@ -19,3 +19,7 @@ docs/converters.md
 site
 ToJetsonGrp
 .vscode
+
+# tspkg
+.release
+.develop
